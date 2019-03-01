@@ -1,0 +1,22 @@
+Username : kcc
+password : exam@KCC
+DB name: OES
+table: loginDetails
+
+create user kcc@localhost identified by 'exam@KCC';
+grant all privileges on OES.* to kcc@localhost;
+create database OES;
+
+ create table studLoginDetail
+ (
+    roll varchar(12) primary key,
+    password varchar(20) not null
+ );
+
+ create table studDetail
+  (
+      roll varchar(12) primary key,
+      name varchar(30) not null,
+      phone char(10) unique,
+      dept varchar(30) not null
+  );

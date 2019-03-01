@@ -1,0 +1,142 @@
+*{
+    margin:0;
+}
+
+body{
+    background-color: #4b4b4b;
+}
+.navigation
+{
+    height: 10vh;
+    width: 100%;
+    background-color: #218c74;
+    position: fixed;
+    z-index:1;
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr 1fr;
+    /* grid-template-columns: repeat(4,1fr); */
+}
+.navigation div:nth-child(1){
+    justify-self: start;
+    align-self: center;
+    padding-left: 30px;
+    font-size:5vh;
+    font-family: 'Lora', serif;
+    color:#f7f1e3;
+}
+.navigation div:nth-child(2) , .navigation div:nth-child(3) ,.navigation div:nth-child(4){
+    justify-self: end;
+    align-self: center;
+    padding-right: 40px;
+    font-size:4vh;
+    font-family: 'Lora', serif;
+    color:#f7f1e3;
+}
+.optionBtn{
+    height:5vh;
+    width:10vw;
+    background-color: transparent;
+    color:rgb(240, 237, 237);
+    border:1px solid rgb(240, 237, 237);
+    cursor: pointer;
+    font-size:20px;
+    font-family:  'Lora', serif;
+    border-radius: 5px;
+}
+.optionBtn:hover{
+    /* background-color:#2fc2a2; */
+    /* background-color:#1dd1a1; */
+    color:#fff;
+    border:1px solid #fff;
+    transform: translateY(-2px);
+   transition:0.5s ease;
+}
+
+.setQuestion{
+    height: 35vh;
+    width:80%;
+    margin:30px auto;
+    padding-top:20px;
+    background-color: #3d3d3d;
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+    padding-left: 50px;
+}
+
+.setQuestion label{
+    font-size:3vh;
+    color: #ecf0f1;
+}
+
+.setQuestion input[type="text"] , .setQuestion input[type="date"] {
+    height:3vh;
+    width:20%;
+    background-color: transparent;
+    color:#fff;
+    border:none;
+    border-bottom:1px solid white;
+    border-top:1px solid white;
+    font-size:12px;
+}
+
+.setQuestion select{
+    height:4vh;
+    width:20%;
+    background-color: transparent;
+    color:#fff;
+    border:none;
+    border-bottom:1px solid white;
+    border-top:1px solid white;
+    font-size:12px;
+}
+
+.questions{
+    height: 55vh;
+    width:80%;
+    padding-top:30px;
+    margin:30px auto;
+    background-color: #3d3d3d;
+    padding-left: 50px;
+}
+
+.questions label{
+    font-size:20px;
+    color:#fff;
+    padding-right:20px;
+    font-family: 'Lora', serif;
+}
+
+.questions input[type="text"] , .questions select
+{
+    width:50%;
+    height:3vh;
+    background-color:transparent;
+    color:#fff;
+    font-family: 'Lora', serif;
+    border:none;
+    border:1px solid white;
+    font-size:20px;
+    border-radius:5px;
+    padding:5px;
+}
+
+.questions select{
+    height: 6vh;
+}
+
+#submit_Add , #submit_Exam_Detail
+{
+    height:70px;
+    width:70px;
+    float:right;
+    padding-right: 20px;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+#submit_Add:hover ,#submit_Exam_Detail:hover{
+    filter: grayscale(50%);
+}
+#submit_Add:active , #submit_Exam_Detail:active{
+    height:68px;
+    width:68px;
+}

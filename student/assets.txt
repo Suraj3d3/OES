@@ -1,0 +1,12 @@
+.................................In instrunction page....................................
+
+background-color: #3d3d3d;
+color:#f7f1e3;
+
+@import url('https://fonts.googleapis.com/css?family=Lora');
+font-family: 'Lora', serif;
+
+
+
+
+..............................................................................................

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+body{
+    background-color: #4b4b4b;
+}
+
+#loginDiv{
+    height: 60vh;
+    width:30%;
+    background-color: #2d3436;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:150px;
+    display: grid;
+    grid-template-rows: repeat(1fr,4);
+    justify-content: center;
+}
+#loginHead
+{
+    color:#dfe6e9;
+    font-size:5vh;
+    text-align: center;
+    font-family: 'Lora', serif;
+    align-self: center; 
+}
+
+#loginDiv input[type="text"] , #loginDiv input[type="password"]{
+    height:4vh;
+    width:100%;
+    border:none;
+    border-radius:2px;
+    background-color:#dfe6e9;
+}
+
+#loginDiv input[type="button"]
+{
+    background-color:transparent;
+    height:5vh;
+    width:100%;
+    font-size:3vh;
+   text-align: center;
+    border:1px solid #fff;
+    color:#fff;
+    font-style: bold;
+    font-family: 'Lora', serif;
+    cursor: pointer;
+    border-radius:2px;
+}
+#loginDiv input[type="button"]:hover{
+    background-color:#cfcece;
+    color:#000;
+    transition: ease 0.7s;
+   
+    
+}
+
+
+#loginDiv label{
+    color:#fff;
+    font-size:16px;
+    text-align: center;
+    font-style: bold;
+    font-family: 'Lora', serif;
+    align-self: center; 
+}
+
+#loginStatus{
+    color:#ED4C67;
+    font-size:20px;
+    font-stretch: expanded;
+}

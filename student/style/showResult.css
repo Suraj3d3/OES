@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+*{
+    margin:0;
+    /* padding:0; */
+}
+
+body{
+    background-color: #4b4b4b;
+}
+
+.box{
+    margin:0 auto;
+    padding:50px;
+    overflow: hidden;
+}
+
+.navigation
+{
+    height: 10vh;
+    width: 100%;
+    background-color: #218c74;
+    position: fixed;
+    z-index:1;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.navigation div:nth-child(1){
+    justify-self: start;
+    align-self: center;
+    padding-left: 30px;
+    font-size:5vh;
+    font-family: 'Lora', serif;
+    color:#f7f1e3;
+}
+.navigation div:nth-child(2){
+    justify-self: end;
+    align-self: center;
+    padding-right: 50px;
+    font-size:4vh;
+    font-family: 'Lora', serif;
+    color:#f7f1e3;
+}
+
+.instructions{
+   margin-left: 50px;;
+   margin-right: 50px;
+   /* background-color: #f7f1e3; */
+   background-color: #3d3d3d;
+   color:#f7f1e3;
+   line-height: 2em;
+   padding:20px;
+   
+}
+.instructions ul li{
+    font-size:3vh;
+}
+
+
+.optionBtn{
+    height:5vh;
+    width:10vw;
+    background-color: transparent;
+    color:rgb(240, 237, 237);
+    border:1px solid rgb(240, 237, 237);
+    cursor: pointer;
+    font-size:20px;
+    font-family:  'Lora', serif;
+    border-radius: 5px;
+}
+.optionBtn:hover{
+    /* background-color:#2fc2a2; */
+    /* background-color:#1dd1a1; */
+    color:#fff;
+    border:1px solid #fff;
+    transform: translateY(-2px);
+   transition:0.5s ease;
+}
+
+table{
+    text-align: left;
+    padding-left: 50px;
+    font-size:3vh;
+    font-family:  'Lora', serif;
+}
