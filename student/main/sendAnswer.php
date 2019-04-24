@@ -1,6 +1,6 @@
 <?php
 
-   $conn  = mysqli_connect("localhost","kcc","exam@KCC");
+   $conn  = mysqli_connect("localhost","kcc","exam@KCC123");
    mysqli_select_db($conn,"OES");
 
     session_start();

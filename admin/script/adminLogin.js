@@ -14,6 +14,7 @@ function checkLogin()
             if(this.responseText==1)
             {
               window.location="http://localhost/OES/admin/main/adminPanel.php";
+              // window.location="https://surajchaudhary.me/OES/admin/main/adminPanel.php";
             }
             else
             {

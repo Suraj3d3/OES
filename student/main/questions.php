@@ -4,10 +4,18 @@
    if(!isset($_SESSION['roll']))
    {
       header('location:http://localhost/OES/student/main/studLogin.php');
+      // header('location:https://surajchaudhary.me/OES/student/main/studLogin.php');
    }
 
-  $conn = mysqli_connect("localhost","kcc","exam@KCC");
+  $conn = mysqli_connect("localhost","kcc","exam@KCC123");
   mysqli_select_db($conn,"OES");
+  
+  $examCode=$_SESSION['examCode'];
+  $qu0 = "select examDuration from examdetail where examCode='$examCode'";
+  $r=mysqli_query($conn,$qu0);
+  $duration_row=mysqli_fetch_array($r);
+
+  $duration = $duration_row['examDuration']-1;//total time in minutes 
 
   $qu = "select * from questions";
 
@@ -30,10 +38,14 @@
     
      <div class="navigation"> 
         <div>Karim city college</div>
-        <div><span style="color:#ffb142;">Time Left:-</span>  58m:14s</div>
-        <div> <input type="button" value="Submit" class="optionBtn" onclick="window.location='result.php';"> </div>
+        <!-- <div><span style="color:#ffb142;">Time Left:-</span>  58m:14s</div> -->
+        <div id="timerDiv">
+            <b id="minBox"> <?php echo $duration; ?> </b> <label>min: </label> 
+            <b id="secBox"> 00 </b> <label>sec</label>
+        </div>
+        <div> <input type="button" value="Submit" class="optionBtn" onclick="window.location='result.php'; endTimer();"> </div>
      </div>
-  
+   
      <div style="height:10vh;"></div>
  
      <div class="questionContainer">

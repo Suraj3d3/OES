@@ -4,6 +4,7 @@ function checkmark()
     if(ch==true)
     {
        window.location="http://localhost/OES/student/main/questions.php";
+    //    window.location="https://surajchaudhary.me/OES/student/main/questions.php";
     }
     else
     if(ch==false)

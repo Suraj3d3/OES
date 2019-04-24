@@ -3,6 +3,7 @@
    if(!isset($_SESSION['username']))
    {
        header('Location:http://localhost/OES/admin/main/adminLogin.php');
+      //  header('Location:https://surajchaudhary.me/OES/admin/main/adminLogin.php');
    }
 ?>
 
@@ -47,11 +48,18 @@
                   <input type="text" name="noq" id="noq" placeholder="Number of questions">
                 </div>
              
+                <div>
+                   <label for="duration"> Exam Duration</label> &nbsp; &nbsp;
+                  <input type="number" name="duration_hour" id="duration_hour" placeholder="Hours" min=0 max=5> &nbsp;&nbsp;
+                  <input type="number" name="duration_minute" id="duration_minute" placeholder="Minutes" min=0 max=59>
+              </div>
+
               <div>      
                 <label for="examDate">Select exam date</label> &nbsp; &nbsp; &nbsp;
                 <input type="date" name="examDate" id="examDate">
-                <img src="../img/add.png" alt="" id="submit_Exam_Detail" onclick="insertExamDetail();">
-              </div>              
+                <img src="../img/add.png" alt="" id="submit_Exam_Detail" onclick="insertExamDetail(); enableQuestions();">
+              </div>  
+            
         </div>
         </form>
 

@@ -5,9 +5,10 @@
    if(!isset($_SESSION['roll']))
    {
        header('location:http://localhost/OES/student/studLogin.php');
+    //    header('location:https://surajchaudhary.me/OES/student/studLogin.php');
    }
 
-   $conn  = mysqli_connect("localhost","kcc","exam@KCC");
+   $conn  = mysqli_connect("localhost","kcc","exam@KCC123");
     mysqli_select_db($conn,"OES");
 
     $tableName = $_SESSION['examCode']; //because table name which contain all the answers of all student having name same as examCode
@@ -24,9 +25,9 @@
     $noq = $data3['noq'];
     $finalScore = $data3['finalResult'];
     $per = ($finalScore/$noq) * 100;
+     
 
-
-    $q4 = "insert into $tableName(percentage) value($per) where roll='$roll'";
+    $q4 = "update $tableName set percentage=$per where roll='$roll'";
     mysqli_query($conn,$q4);
 
     mysqli_close($conn);
@@ -46,6 +47,7 @@
     <title>KCC::Exam Result</title>
 </head>
 <body>
+    
      <div class="navigation"> 
         <div>Karim city college</div>
         <div> <input type="button" value="Logout" class="optionBtn" onclick="window.location='submit.php';"> </div>

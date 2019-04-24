@@ -1,6 +1,23 @@
+   document.getElementById("qu").disabled=true;
+   document.getElementById("opt1").disabled=true;
+   document.getElementById("opt2").disabled=true;
+   document.getElementById("opt3").disabled=true;
+   document.getElementById("opt4").disabled=true;
+   document.getElementById("ans").disabled=true;
+
+ function enableQuestions(){
+    document.getElementById("qu").disabled=false;
+    document.getElementById("opt1").disabled=false;
+    document.getElementById("opt2").disabled=false;
+    document.getElementById("opt3").disabled=false;
+    document.getElementById("opt4").disabled=false;
+    document.getElementById("ans").disabled=false;
+ }
+
 function logout()
 {
     window.location="http://localhost/OES/admin/main/logout.php";
+    // window.location="https://surajchaudhary.me/OES/admin/main/logout.php";
 }
 
 var count=1; //a variable to keep count of question number
@@ -46,9 +63,12 @@ function insertExamDetail()
     var paperCode = document.getElementById("paperCode").value;
     var examDate = document.getElementById("examDate").value;
     var noq = document.getElementById("noq").value;
+    var duration_hour = document.getElementById("duration_hour").value;
+    var duration_minute = document.getElementById("duration_minute").value;
+
 
     var xhttp = new XMLHttpRequest();
-    xhttp.open('GET','insertExamDetail.php?examCode='+examCode+'&paperCode='+paperCode+'&examDate='+examDate+'&noq='+noq,true);
+    xhttp.open('GET','insertExamDetail.php?examCode='+examCode+'&paperCode='+paperCode+'&examDate='+examDate+'&noq='+noq+'&duration_hour='+duration_hour+'&duration_minute='+duration_minute,true);
     // xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send();
     // xhttp.send("examCode="+examCode+"&paperCode="+paperCode+"&examDate="+examDate);

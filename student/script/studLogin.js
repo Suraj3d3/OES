@@ -15,6 +15,7 @@ function checkLogin()
             if(this.responseText==1)
             {
               window.location="http://localhost/OES/student/main/instruction.php";
+              // window.location="https://surajchaudhary.me/OES/student/main/instruction.php";
             }
             else
             {

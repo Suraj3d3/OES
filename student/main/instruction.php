@@ -4,11 +4,12 @@
   if(!isset($_SESSION['roll']))
   {
      header('location:http://localhost/OES/student/main/studLogin.php');
+    //  header('location:https://surajchaudhary.me/OES/student/main/studLogin.php');
   }
 
        $roll = $_SESSION['roll'];
     
-        $conn = mysqli_connect("localhost","kcc","exam@KCC");
+        $conn = mysqli_connect("localhost","kcc","exam@KCC123");
         mysqli_select_db($conn,"OES");
         $q = "select name from studDetail where roll='$roll' ";
         $result = mysqli_query($conn,$q);
@@ -22,7 +23,7 @@
         $raw1 = mysqli_fetch_array($result1);
         $examDate = $raw1['examDate'];
         $paperCode = $raw1['paperCode'];
-    
+        $examDuration = $raw1['examDuration'];
     
 
 ?>
@@ -57,7 +58,7 @@
             <div class="instructions">
                 <h2>Instructions</h2>
                 <ul>
-                    <li>You have 60 minutes to answer all the questions.</li>
+                    <li>You have <?php echo $examDuration; ?> minutes to answer all the questions.</li>
                     <li>Once the time exceed to the given time , all the answers will be automatically submitted.</li>
                     <li>All questions are compulsory.</li>
                     <li>In case of any kind of system crisis immediately call the examination incharge.</li>     

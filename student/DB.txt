@@ -1,9 +1,9 @@
 Username : kcc
-password : exam@KCC
+password : exam@KCC123
 DB name: OES
 table: loginDetails
 
-create user kcc@localhost identified by 'exam@KCC';
+create user kcc@localhost identified by 'exam@KCC123';
 grant all privileges on OES.* to kcc@localhost;
 create database OES;
 

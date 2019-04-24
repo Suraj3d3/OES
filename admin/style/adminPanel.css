@@ -59,7 +59,7 @@ body{
     padding-top:20px;
     background-color: #3d3d3d;
     display: grid;
-    grid-template-rows: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
     padding-left: 50px;
 }
 
@@ -68,7 +68,7 @@ body{
     color: #ecf0f1;
 }
 
-.setQuestion input[type="text"] , .setQuestion input[type="date"] {
+.setQuestion input[type="text"] , .setQuestion input[type="date"] , .setQuestion input[type="number"]{
     height:3vh;
     width:20%;
     background-color: transparent;
@@ -79,10 +79,14 @@ body{
     font-size:12px;
 }
 
+.setQuestion input[type="number"]{
+    width:70px;
+}
+
 .setQuestion select{
     height:4vh;
     width:20%;
-    background-color: transparent;
+    background-color: #3d3d3d;
     color:#fff;
     border:none;
     border-bottom:1px solid white;
@@ -122,6 +126,8 @@ body{
 
 .questions select{
     height: 6vh;
+    background-color: #3d3d3d;
+    color:#fff;
 }
 
 #submit_Add , #submit_Exam_Detail

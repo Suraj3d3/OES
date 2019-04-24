@@ -3,6 +3,7 @@
    if(!isset($_SESSION['username']))
    {
        header('Location:http://localhost/OES/admin/main/adminLogin.php');
+    //    header('Location:https://surajchaudhary.me/OES/admin/main/adminLogin.php');
    }
 ?>
 
@@ -30,8 +31,8 @@
             <form  method="get">
                 <label for="examCode">Enter Exam Code to Check result </label> &nbsp; &nbsp;
                 <input type="text" name="examCode" id="examCode1" placeholder="Exam Code">
-                <br>
-                <input type="button" value="Search" onclick="viewResult();">
+               &nbsp; &nbsp; &nbsp;
+                <input type="button" value="Search" onclick="viewResult();" class="optionBtn">
             </form>
      </div>
      <div id="showResultDiv"> </div>

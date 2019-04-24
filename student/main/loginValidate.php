@@ -5,7 +5,7 @@
     //  $dob = date('Y-m-d', strtotime($rawdob));
 
 
-    $conn = mysqli_connect('localhost','kcc','exam@KCC');
+    $conn = mysqli_connect('localhost','kcc','exam@KCC123');
     mysqli_select_db($conn,'OES');
 
     //to escape from error thrown by special character in mysql tabel using the below function 

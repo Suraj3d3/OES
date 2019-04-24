@@ -3,3 +3,25 @@ create table adminLoginDetail
     username varchar(20) primary key,
     password varchar(20) not null
  );
+
+
+ create table examDetail
+ (
+    examCode varchar(10) PRIMARY KEY,
+    paperCode varchar(10),
+    noq int,
+    examDate date,
+    examDuration int
+ );
+
+ create table questions
+     (
+      qno varchar(10) PRIMARY KEY,
+      question varchar(300),
+      opt1 varchar(100),
+      opt2 varchar(100),
+      opt3 varchar(100),
+      opt4 varchar(100),
+      ans char(4),
+      examCode varchar(10)
+     );

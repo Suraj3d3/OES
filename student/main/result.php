@@ -4,9 +4,10 @@
    if(!isset($_SESSION['roll']))
    {
        header('location:http://localhost/OES/student/studLogin.php');
+    //    header('location:https://surajchaudhary.me/OES/student/studLogin.php');
    }
 
-   $conn  = mysqli_connect("localhost","kcc","exam@KCC");
+   $conn  = mysqli_connect("localhost","kcc","exam@KCC123");
    mysqli_select_db($conn,"OES");
 
     
@@ -57,6 +58,7 @@
     mysqli_close($conn);
 
     header('location:http://localhost/OES/student/main/showResult.php');
+    // header('location:https://surajchaudhary.me/OES/student/main/showResult.php');
    ?>
 
    

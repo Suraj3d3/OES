@@ -1,7 +1,7 @@
 <?php
 
 $tableName = $_GET['examCode'];
-            $conn  = mysqli_connect("localhost","kcc","exam@KCC");
+            $conn  = mysqli_connect("localhost","kcc","exam@KCC123");
             mysqli_select_db($conn,"OES");
             $qu = "select t.* , e.* from $tableName t , examDetail e where t.examCode=e.examCode";
             $r = mysqli_query($conn,$qu);
